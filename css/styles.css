@@ -52,6 +52,28 @@
     text-decoration: none;
 }
 
+.active::after {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 4px;
+    left: 443px;
+    top: 76px;
+    background: var(--bg-color);
+    border-radius: 2px;
+}
+
+.active-portfolio::after {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 4px;
+    left: 542px;
+    top: 76px;
+    background: var(--bg-color);
+    border-radius: 2px;
+}
+
 .web-header .topbar .main-logo a:focus,
 .web-header .topbar .main-logo a:hover
 {
@@ -206,7 +228,8 @@ ul
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
         url(../images/people.jpg);
-    background-size: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     width: 100%;
     /* height: 600px; */
@@ -353,6 +376,31 @@ ul
 {
     list-style: none;
 }
+
+/* ======= CZYM SIĘ ZAJMUJEMY ======= */
+
+.our-action
+{
+    position: relative;
+}
+
+.our-action > .lable 
+{
+    position: absolute;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 27px 90px;
+    color: #ffffff;
+    background: rgba(47, 48, 58, 0.8);
+}
+
+/* ======= EMD CZYM SIĘ ZAJMUJEMY ======= */
 
 .web-content .our-team 
 {
@@ -502,6 +550,43 @@ ul
     background: var(--top-hover-focus);
     color: var(--fill);
 }
+
+/* ======= OVERLAY ANIMATION ======= */
+
+.photo {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 49px;
+    padding-left: 24px;
+    transform: translateY(100%);
+    transition: transform 250ms;
+}
+
+.photo:hover .overlay {
+    transform: translatex(0);
+    background: rgba(33, 150, 243, 0.9);
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-overlay {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: var(--fill);
+}
+
+/* ======= END OVERLAY ANIMATION ======= */
 
 .web-content .portfolio .label .details 
 {
@@ -807,3 +892,57 @@ div
     justify-content: center;
     align-items: center;
 }
+
+/* ======= BACKDROP ======= */
+
+.backdrop {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: transform 500ms linear, visibility 500ms linear,
+        opacity 500ms linear;
+}
+
+.is-hidden {
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: var(--fill);
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+        0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 4px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--fill);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--link-color);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ======= END BACKDROP ======= */
