@@ -274,7 +274,7 @@ ul
     padding-bottom: 40px;
 }
 
-.web-content .switch button 
+.web-content .switch button
 {
     display: block;
     width: 200px;
@@ -294,6 +294,13 @@ ul
     margin: auto;
 
     cursor: pointer;
+}
+
+.web-content .switch button:hover,
+.web-content .switch button:focus
+{
+    background-color: var(--bg-color-2);
+    color: var(--bg-color);
 }
 
 .web-content .our-profile 
@@ -908,7 +915,7 @@ div
 
 .footer .footer-informations .socialMedia .detail:hover 
 {
-    background: var(--top-hover-focus)
+    background: var(--top-hover-focus);
 }
 
 .media-details 
