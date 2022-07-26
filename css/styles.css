@@ -55,6 +55,7 @@
 .link 
 {
     position: relative;
+    transition-duration: 500ms;
 }
 
 .active-link::after 
@@ -91,7 +92,7 @@
 .web-header .topbar .main-logo a:hover
 {
     color: var(--hover-focus);
-        transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
     outline: none;
 }
 
@@ -303,6 +304,7 @@ ul
     margin: auto;
 
     cursor: pointer;
+    transition-duration: 500ms;
 }
 
 .web-content .switch button:hover,
@@ -549,6 +551,11 @@ ul
     align-items: center;
 }
 
+.socialMedia .details .detail
+{
+    transition-duration: 500ms;
+}
+
 .web-content .our-team .socialMedia .details .detail:hover,
 .web-content .our-team .socialMedia .details .detail:focus
 {
@@ -603,6 +610,7 @@ ul
     border: 0px;
     padding: 6px 22px;
     cursor: pointer;
+    transition-duration: 500ms;
 }
 
 .web-content .portfolio .buttons-bar .details .detail button[type=button]:hover,
@@ -806,6 +814,8 @@ ul
     width: 170px;
     height: 92px;
     fill: #afb1b8;
+    
+    transition-duration: 500ms;
 }
 
 .web-content .our-clients .details .detail .link:hover,
@@ -903,6 +913,7 @@ div
 {
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+    transition-duration: 500ms;
 }
 
 .footer .footer-informations .contact-us .address .details .detail a:hover,
@@ -939,7 +950,7 @@ div
     padding: 0;
 }
 
-.footer .footer-informations .socialMedia .detail 
+.footer .footer-informations .socialMedia .detail
 {
     display: inline-flex;
     justify-content: center;
@@ -957,11 +968,23 @@ div
 .footer .footer-informations .socialMedia .detail a 
 {
     text-decoration: none;
+    
 }
 
 /* ======= MEDIA FOOTER FOCUS ======= */
-.media-details:focus
 
+.media-details 
+{
+    display: inline-flex;
+    text-decoration: none;
+
+    fill: #fff;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.media-details:focus
 {
     fill: var(--bg-color);
     border: 1px solid var(--bg-color);
@@ -980,17 +1003,6 @@ div
     background: var(--top-hover-focus);
     transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
     outline: none;
-}
-
-.media-details 
-{
-    display: inline-flex;
-    text-decoration: none;
-
-    fill: #fff;
-
-    justify-content: center;
-    align-items: center;
 }
 
 /* ======= BACKDROP ======= */
