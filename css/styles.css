@@ -77,6 +77,7 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
 }
 
 .header-nav-link,
@@ -90,6 +91,8 @@
 .web-header .topbar .main-logo a:hover
 {
     color: var(--hover-focus);
+        transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 .web-header .topbar .main-logo a span 
@@ -129,6 +132,8 @@
 .web-header .topbar .topbar-menu li a:focus 
 {
     color: var(--top-hover-focus);
+        transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 .web-header .topbar .contact-us 
@@ -163,6 +168,8 @@
 .top-icon :hover 
 {
     fill: var(--top-hover-focus);
+        transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 .web-header .topbar .contact-us a 
@@ -182,6 +189,8 @@
 .web-header .topbar .contact-us a:focus 
 {
     color: var(--top-hover-focus);
+        transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 /* END OF HEADER / TOPBAR */
@@ -301,6 +310,8 @@ ul
 {
     background-color: var(--bg-color-2);
     color: var(--bg-color);
+        transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 .web-content .our-profile 
@@ -435,6 +446,19 @@ ul
 
 /* ======= EMD CZYM SIĘ ZAJMUJEMY ======= */
 
+/* MEDIA FOCUS */
+
+.join-us:focus
+{
+    fill: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
 .web-content .our-team 
 {
     background-color: #f5f4fa;
@@ -525,12 +549,16 @@ ul
     align-items: center;
 }
 
-.web-content .our-team .socialMedia .details .detail:hover 
+.web-content .our-team .socialMedia .details .detail:hover,
+.web-content .our-team .socialMedia .details .detail:focus
 {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    border-radius: 50%;
     background: var(--bg-color);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
     fill: var(--fill);
+    outline: none;
 }
 
 .web-content .our-team .socialMedia .details .icon 
@@ -582,6 +610,9 @@ ul
 {
     background: var(--top-hover-focus);
     color: var(--fill);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+        
+    outline: none;
 }
 
 /* ======= OVERLAY ANIMATION ======= */
@@ -605,13 +636,15 @@ ul
     background: rgba(33, 150, 243, 0.9);
 }
 
-.photo:hover .overlay 
+.photo:hover .overlay,
+.photo:focus .overlay
 {
     transform: translateX(0);
     background: rgba(33, 150, 243, 0.9);
     transition: transform 250ms;
     transition-delay: 150ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
 }
 
 .text-overlay {
@@ -652,9 +685,11 @@ ul
     overflow: hidden;
 }
 
-.web-content .portfolio .label .details .detail .photo:hover .layer 
+.web-content .portfolio .label .details .detail .photo:hover .layer,
+.web-content .portfolio .label .details .detail .photo:focus .layer
 {
     transform: translatex(0);
+    outline: none;
 }
 
 .web-content .portfolio .label .details .detail .photo .layer 
@@ -704,9 +739,12 @@ ul
     display: block;
 }
 
-.photo:hover {
+.photo:hover,
+.photo:focus
+{
     cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    outline: none;
 }
 
 .web-content .portfolio .label .details .detail .name 
@@ -777,6 +815,7 @@ ul
     border: 1px solid #2196f3;
     fill: #2196f3;
     transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 /* FOOTER - CONTENT */
@@ -818,6 +857,11 @@ div
 {
     text-decoration: none;
     color: var(--fill);
+}
+
+.footer .footer-informations .contact-us .main-logo a:focus 
+{
+    outline: none;
 }
 
 .footer .footer-informations .contact-us .main-logo span 
@@ -865,6 +909,8 @@ div
 .footer .footer-informations .contact-us .address .details .detail a:focus 
 {
     color: var(--top-hover-focus);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 .footer .footer-informations .socialMedia
@@ -913,9 +959,27 @@ div
     text-decoration: none;
 }
 
-.footer .footer-informations .socialMedia .detail:hover 
+/* ======= MEDIA FOOTER FOCUS ======= */
+.media-details:focus
+
+{
+    fill: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+/* ======= END OF MEDIA FOOTER FOCUS ======= */
+
+.footer .footer-informations .socialMedia .detail:hover,
+.footer .footer-informations .socialMedia .detail:focus
 {
     background: var(--top-hover-focus);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 .media-details 
@@ -931,7 +995,8 @@ div
 
 /* ======= BACKDROP ======= */
 
-.backdrop {
+.backdrop 
+{
     position: fixed;
     left: 0px;
     top: 0px;
@@ -944,14 +1009,16 @@ div
         opacity 500ms linear;
 }
 
-.is-hidden {
+.is-hidden 
+{
     transform: scaleY(0);
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
 
-.modal {
+.modal 
+{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -964,7 +1031,8 @@ div
     border-radius: 4px;
 }
 
-.close-modal {
+.close-modal 
+{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -976,9 +1044,12 @@ div
     cursor: pointer;
 }
 
-.close-modal:hover {
+.close-modal:hover,
+.close-modal:focus
+{
     color: var(--link-color);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    outline: none;
 }
 
 /* ======= END BACKDROP ======= */
